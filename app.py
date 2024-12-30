@@ -1,5 +1,5 @@
 import numpy as np
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, render_template
 import pickle
 
 app = Flask(__name__)
@@ -27,10 +27,5 @@ def predict():
         prediction ='Given transaction is NOT fradulent'            
     return render_template("result.html", prediction = prediction) 
     
-    
-    
-    
-    
-                  
 if __name__ == "__main__":
     app.run(debug=True)
